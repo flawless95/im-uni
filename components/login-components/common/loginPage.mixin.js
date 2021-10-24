@@ -9,6 +9,9 @@ const loginSuccess = (result) => {
 	
 	// console.log('判断需要返回几层',delta);
 	// uni.navigateBack({delta})
+	uni.switchTab({
+		url: '/pages/homePage/news/news'
+	})
 }
 
 

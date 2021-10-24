@@ -8,7 +8,6 @@
 		{
 			"path": "pages/loginPage/index/index",
 			"style": {
-				"navigationBarTitleText": "",
 				"enablePullDownRefresh": false,
 				"navigationStyle": "custom"
 			}
@@ -16,10 +15,30 @@
 		{
 			"path": "pages/homePage/userCenter/userCenter",
 			"style": {
+				"navigationStyle": "custom",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/homePage/news/news",
+			"style": {
+				"navigationStyle": "custom",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/homePage/messge/messge",
+			"style": {
 				"navigationBarTitleText": "",
 				"enablePullDownRefresh": false
 			}
 
+		}, {
+			"path": "pages/homePage/search/search",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
 		}
 	],
 	"globalStyle": {
@@ -27,5 +46,33 @@
 		"navigationBarTitleText": "uni-app",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"height": "130rpx",
+		"iconWidth": "44rpx",
+		"borderStyle": "#EBEBEB",
+		"backgroundColor": "#FFFFFF",
+		"list": [{
+			"pagePath": "pages/homePage/news/news",
+			"iconPath": "static/icon/home.png",
+			"selectedIconPath": "static/icon/homeHL.png",
+			"text": ""
+		}, {
+			"pagePath": "pages/homePage/search/search",
+			"iconPath": "static/icon/search.png",
+			"selectedIconPath": "static/icon/searchHL.png",
+			"text": ""
+		}, {
+			"pagePath": "pages/homePage/messge/messge",
+			"iconPath": "static/icon/message.png",
+			"selectedIconPath": "static/icon/messageHL.png",
+			"text": ""
+		}, {
+			"pagePath": "pages/homePage/userCenter/userCenter",
+			"iconPath": "static/icon/user.png",
+			"selectedIconPath": "static/icon/userHL.png",
+			"text": ""
+		}]
 	}
+
 }
