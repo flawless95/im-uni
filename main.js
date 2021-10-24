@@ -1,4 +1,7 @@
 import App from './App'
+import store from './store/index.js'
+import * as filters from './filters/filters'
+
 
 // #ifndef VUE3
 import Vue from 'vue'
@@ -8,11 +11,27 @@ App.mpType = 'app'
 import uView from "uview-ui";
 Vue.use(uView);
 
+Object.keys(filters).forEach(key => {
+    Vue.filter(key, filters[key])
+})
+
 const app = new Vue({
-	...App
+	...App,
+	store
 })
 app.$mount()
 // #endif
+
+
+
+
+
+
+
+
+
+
+
 
 // #ifdef VUE3
 import {

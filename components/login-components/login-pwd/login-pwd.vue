@@ -15,6 +15,7 @@
 </template>
 
 <script>
+	import mixin from '../common/loginPage.mixin.js'
 	export default {
 		name: "login-pwd",
 		data() {
@@ -25,6 +26,7 @@
 				}
 			};
 		},
+		mixins:[mixin],
 		methods: {
 			submit() {
 				uniCloud.callFunction({
@@ -33,8 +35,10 @@
 						action: 'login-pwd',
 						params: this.form
 					},
-					success: (res) => {
-						console.log(res)
+					success: ({result}) => {
+						if (result.code == 0) {
+							this.loginSuccess(result)
+						}
 					}
 				})
 			}
