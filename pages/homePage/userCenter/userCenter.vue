@@ -81,7 +81,7 @@
 		// background-repeat: no-repeat;
 
 		&__header {
-			padding: 45rpx 65rpx 15rpx;
+			padding: var(--status-bar-height) 65rpx 15rpx;
 			color: #FFFFFF;
 			font-weight: 900;
 			position: fixed;
@@ -138,7 +138,7 @@
 		&__content {
 			flex: 1;
 			background-color: #FFFFFF;
-			border-radius: 60rpx;
+			border-radius: 60rpx 60rpx 0 0;
 			box-sizing: border-box;
 			padding: 15rpx 20rpx;
 			margin-top: 450rpx;

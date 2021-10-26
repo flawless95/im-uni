@@ -9,14 +9,20 @@
 			"path": "pages/loginPage/index/index",
 			"style": {
 				"enablePullDownRefresh": false,
-				"navigationStyle": "custom"
+				"navigationStyle": "custom",
+				"app-plus": {
+					"bounce": "none" // 将回弹属性关掉
+				}
 			}
 		},
 		{
 			"path": "pages/homePage/userCenter/userCenter",
 			"style": {
 				"navigationStyle": "custom",
-				"enablePullDownRefresh": false
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"bounce": "none" // 将回弹属性关掉
+				}
 			}
 
 		}, {
@@ -48,10 +54,13 @@
 		"backgroundColor": "#F8F8F8"
 	},
 	"tabBar": {
-		"height": "130rpx",
-		"iconWidth": "44rpx",
+		"height": "50px",
+		"iconWidth": "20px",
 		"borderStyle": "#EBEBEB",
 		"backgroundColor": "#FFFFFF",
+		// #ifdef APP-PLUS
+		"spacing": "-25px",
+		// #endif
 		"list": [{
 			"pagePath": "pages/homePage/news/news",
 			"iconPath": "static/icon/home.png",

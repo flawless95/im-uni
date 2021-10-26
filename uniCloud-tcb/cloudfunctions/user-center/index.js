@@ -31,7 +31,7 @@ exports.main = async (event, context) => {
 				username, password, nickname
 			} = params
 
-			res = await uniID.register({
+			return await uniID.register({
 				username,
 				password,
 				nickname,
@@ -44,13 +44,13 @@ exports.main = async (event, context) => {
 
 			break;
 		case 'login-pwd':
-			res = await uniID.login({
+			return await uniID.login({
 				...params,
-				queryField: ['username', 'email', 'mobile']
+				queryField: ['username']
 			});
 			break
 		default:
-			res = {
+			return {
 				code: 403,
 				msg: '非法访问'
 			}
