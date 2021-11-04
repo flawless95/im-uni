@@ -1,7 +1,9 @@
 <script>
+	import appInit from '@/appInit.js'
 	export default {
 		onLaunch: function() {
 			console.log('App Launch')
+			appInit()
 		},
 		onShow: function() {
 			console.log('App Show')
